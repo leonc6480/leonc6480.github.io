@@ -729,72 +729,38 @@ Comprar
 
 <script>
 
-const galerias = [
-
-    [
-        "Luces.jpg",
-        "Luces 2.png",
-        "Luces 3.png"
-    ],
-
-    [
-        "Luces 4.png",
-        "Luces 5.png",
-        "Luces 6.png"
-    ],
-
-    [
-        "Luces 7.png",
-        "Luces 8.png",
-        "Luces 9.png"
-    ],
-
-    [
-        "Luces 10.png",
-        "Luces 11.png",
-        "Luces 12.png"
-    ],
-
-    [
-        "Luces 13.png",
-        "Luces 14.png",
-        "Luces 15.png"
-    ]
-
+const imagenes = [
+    ["Luces.jpg", "Luces 2.png", "Luces 3.png"],
+    ["Luces 4.png", "Luces 5.png", "Luces 6.png"],
+    ["Luces 7.png", "Luces 8.png", "Luces 9.png"],
+    ["Luces 10.png", "Luces 11.png", "Luces 12.png"],
+    ["Luces 13.png", "Luces 14.png", "Luces 15.png"]
 ];
 
-const pos = [0, 0, 0, 0, 0];
+let posicion = [0, 0, 0, 0, 0];
 
+function sig(producto) {
 
-function sig(n) {
+    posicion[producto]++;
 
-    pos[n]++;
-
-    if (pos[n] >= galerias[n].length) {
-        pos[n] = 0;
+    if (posicion[producto] >= imagenes[producto].length) {
+        posicion[producto] = 0;
     }
 
-    act(n);
+    document.getElementById("img" + (producto + 1)).src =
+        imagenes[producto][posicion[producto]];
 }
 
+function ant(producto) {
 
-function ant(n) {
+    posicion[producto]--;
 
-    pos[n]--;
-
-    if (pos[n] < 0) {
-        pos[n] = galerias[n].length - 1;
+    if (posicion[producto] < 0) {
+        posicion[producto] = imagenes[producto].length - 1;
     }
 
-    act(n);
-}
-
-
-function act(n) {
-
-    document.getElementById("img" + (n + 1)).src =
-        galerias[n][pos[n]];
-
+    document.getElementById("img" + (producto + 1)).src =
+        imagenes[producto][posicion[producto]];
 }
 
 </script>
