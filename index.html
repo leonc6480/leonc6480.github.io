@@ -729,210 +729,71 @@ Comprar
 
 <script>
 
-/* PRODUCTO 1 */
+const galerias = [
 
-let imagenes = [
-    "Luces.jpg",
-    "Luces 2.png",
-    "Luces 3.png"
+    [
+        "Luces.jpg",
+        "Luces 2.png",
+        "Luces 3.png"
+    ],
+
+    [
+        "Luces 4.png",
+        "Luces 5.png",
+        "Luces 6.png"
+    ],
+
+    [
+        "Luces 7.png",
+        "Luces 8.png",
+        "Luces 9.png"
+    ],
+
+    [
+        "Luces 10.png",
+        "Luces 11.png",
+        "Luces 12.png"
+    ],
+
+    [
+        "Luces 13.png",
+        "Luces 14.png",
+        "Luces 15.png"
+    ]
+
 ];
 
-let posicion = 0;
+const pos = [0, 0, 0, 0, 0];
 
-function mostrarImagen() {
 
-    document.getElementById("imagenCarrusel").src =
-        imagenes[posicion];
+function sig(n) {
 
-}
+    pos[n]++;
 
-function imagenSiguiente() {
-
-    posicion++;
-
-    if (posicion >= imagenes.length) {
-        posicion = 0;
+    if (pos[n] >= galerias[n].length) {
+        pos[n] = 0;
     }
 
-    mostrarImagen();
-
+    act(n);
 }
 
-function imagenAnterior() {
 
-    posicion--;
+function ant(n) {
 
-    if (posicion < 0) {
-        posicion = imagenes.length - 1;
+    pos[n]--;
+
+    if (pos[n] < 0) {
+        pos[n] = galerias[n].length - 1;
     }
 
-    mostrarImagen();
-
+    act(n);
 }
 
 
-/* PRODUCTO 2 */
+function act(n) {
 
-let imagenes2 = [
-    "Luces 4.png",
-    "Luces 5.png",
-    "Luces 6.png"
-];
-
-let posicion2 = 0;
-
-function mostrarImagen2() {
-
-    document.getElementById("imagenCarrusel2").src =
-        imagenes2[posicion2];
-
-}
-
-function imagenSiguiente2() {
-
-    posicion2++;
-
-    if (posicion2 >= imagenes2.length) {
-        posicion2 = 0;
-    }
-
-    mostrarImagen2();
-
-}
-
-function imagenAnterior2() {
-
-    posicion2--;
-
-    if (posicion2 < 0) {
-        posicion2 = imagenes2.length - 1;
-    }
-
-    mostrarImagen2();
-
-}
-
-
-/* PRODUCTO 3 */
-
-let imagenes3 = [
-    "Luces 7.png",
-    "Luces 8.png",
-    "Luces 9.png"
-];
-
-let posicion3 = 0;
-
-function mostrarImagen3() {
-
-    document.getElementById("imagenCarrusel3").src =
-        imagenes3[posicion3];
-
-}
-
-function imagenSiguiente3() {
-
-posicion3++;
-
-    if (posicion3 >= imagenes3.length) {
-        posicion3 = 0;
-    }
-
-    mostrarImagen3();
-
-}
-
-function imagenAnterior3() {
-
-    posicion3--;
-
-    if (posicion3 < 0) {
-        posicion3 = imagenes3.length - 1;
-    }
-
-    mostrarImagen3();
-
-}
-
-/* PRODUCTO 4 */
-
-let imagenes4 = [
-    "Luces 10.png",
-    "Luces 11.png",
-    "Luces 12.png"
-];
-
-let posicion4 = 0;
-
-function mostrarImagen4() {
-
-    document.getElementById("imagenCarrusel4").src =
-        imagenes4[posicion4];
-
-}
-
-function imagenSiguiente4() {
-
-posicion4++;
-
-    if (posicion4 >= imagenes4.length) {
-        posicion4 = 0;
-    }
-
-    mostrarImagen4();
-
-}
-
-function imagenAnterior4() {
-
-    posicion4--;
-
-    if (posicion4 < 0) {
-        posicion4 = imagenes4.length - 1;
-    }
-
-    mostrarImagen4();
-
-}
-
-/* PRODUCTO 5 */
-
-let imagenes5 = [
-    "Luces 13.png",
-    "Luces 14.png",
-    "Luces 15.png"
-];
-
-let posicion5 = 0;
-
-function mostrarImagen5() {
-
-    document.getElementById("imagenCarrusel5").src =
-        imagenes5[posicion5];
-
-}
-
-function imagenSiguiente5() {
-
-posicion5++;
-
-    if (posicion5 >= imagenes5.length) {
-        posicion5 = 0;
-    }
-
-    mostrarImagen5();
-
-}
-
-function imagenAnterior5() {
-
-    posicion5--;
-
-    if (posicion5 < 0) {
-        posicion5 = imagenes5.length - 1;
-    }
-
-    mostrarImagen5();
+    document.getElementById("img" + (n + 1)).src =
+        galerias[n][pos[n]];
 
 }
 
