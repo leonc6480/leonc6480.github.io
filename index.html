@@ -2,34 +2,18 @@
 <html lang="es-MX">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ravox Moto Lighting</title>
-
 
 <style>
 
 /* ========================= */
-/* GENERAL */
+/* FONDO */
 /* ========================= */
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-
-    margin: 0;
-    padding: 0;
-
     background:
         radial-gradient(
             circle at 50% 0%,
@@ -48,32 +32,30 @@ body {
         ),
         #000000;
 
-    font-family:
-        'Times New Roman',
-        Times,
-        serif;
+    margin:0;
+    padding:0;
 
-    color: white;
+    font-family:'Times New Roman', Times, serif;
+
+    position:relative;
 }
 
 
 /* ========================= */
 /* FONDO TECNOLÓGICO */
+/* SIN ANIMACIÓN */
 /* ========================= */
 
 .fondo-tecnologico {
+    position:fixed;
+    top:0;
+    left:0;
 
-    position: fixed;
+    width:100%;
+    height:100%;
 
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    z-index: 0;
+    pointer-events:none;
+    z-index:0;
 
     background:
         radial-gradient(
@@ -91,235 +73,53 @@ body {
             rgba(138,43,226,0.12),
             transparent 30%
         );
-
-    animation:
-        movimientoFondo 10s ease-in-out infinite alternate;
-}
-
-
-@keyframes movimientoFondo {
-
-    0% {
-        transform: scale(1);
-        opacity: 0.65;
-    }
-
-    50% {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0.65;
-    }
-
 }
 
 
 /* ========================= */
 /* PARTÍCULAS */
+/* FIJAS */
 /* ========================= */
 
 .particula {
+    position:absolute;
 
-    position: absolute;
+    width:3px;
+    height:3px;
 
-    width: 3px;
-    height: 3px;
+    background:#c77dff;
 
-    background: #c77dff;
-
-    border-radius: 50%;
+    border-radius:50%;
 
     box-shadow:
-        0 0 5px #c77dff,
-        0 0 10px #a855f7,
-        0 0 15px #8a2be2;
+        0 0 8px #c77dff;
 
-    z-index: 1;
+    z-index:1;
 
-    pointer-events: none;
-
-    animation:
-        brilloParticula
-        2s
-        ease-in-out
-        infinite
-        alternate;
-}
-
-
-@keyframes brilloParticula {
-
-    from {
-
-        opacity: 0.25;
-
-        transform:
-            scale(0.7);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            scale(1.5);
-
-    }
-
+    pointer-events:none;
 }
 
 
 /* ========================= */
 /* DESTELLOS */
+/* FIJOS */
 /* ========================= */
 
 .destello {
+    position:absolute;
 
-    position: absolute;
+    color:#c77dff;
 
-    color: #c77dff;
-
-    font-size: 22px;
+    font-size:22px;
 
     text-shadow:
         0 0 8px #c77dff,
         0 0 18px #a855f7,
         0 0 30px #8a2be2;
 
-    pointer-events: none;
+    pointer-events:none;
 
-    z-index: 3;
-
-    animation:
-        brilloDestello
-        1.8s
-        ease-in-out
-        infinite
-        alternate;
-}
-
-
-@keyframes brilloDestello {
-
-    from {
-
-        opacity: 0.35;
-
-        transform:
-            scale(0.8)
-            rotate(0deg);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            scale(1.3)
-            rotate(15deg);
-
-    }
-
-}
-
-
-/* ========================= */
-/* CARRUSEL */
-/* ========================= */
-
-.carrusel {
-
-    position: relative;
-
-    width: 100%;
-    height: 300px;
-
-    overflow: hidden;
-
-    border-radius: 8px;
-}
-
-
-.imagen-carrusel {
-
-    width: 100%;
-    height: 300px;
-
-    object-fit: contain;
-
-    display: block;
-
-    transition:
-        opacity 0.25s ease;
-}
-
-
-/* ========================= */
-/* BOTONES CARRUSEL */
-/* ========================= */
-
-.boton-carrusel {
-
-    position: absolute;
-
-    top: 50%;
-
-    transform:
-        translateY(-50%);
-
-    width: 42px;
-    height: 42px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background:
-        rgba(0,0,0,0.65);
-
-    color: white;
-
-    font-size: 28px;
-
-    cursor: pointer;
-
-    z-index: 10;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    box-shadow:
-        0 0 8px
-        rgba(199,125,255,0.6);
-}
-
-
-.boton-carrusel:hover {
-
-    background:
-        rgba(138,43,226,0.75);
-
-    box-shadow:
-        0 0 10px #c77dff,
-        0 0 20px #8a2be2;
-
-}
-
-
-.boton-izquierdo {
-    left: 5px;
-}
-
-
-.boton-derecho {
-    right: 5px;
+    z-index:1;
 }
 
 
@@ -328,142 +128,40 @@ body {
 /* ========================= */
 
 .indicadores {
+    position:absolute;
 
-    position: absolute;
+    bottom:8px;
+    left:50%;
 
-    bottom: 8px;
+    transform:translateX(-50%);
 
-    left: 50%;
+    display:flex;
 
-    transform:
-        translateX(-50%);
+    gap:7px;
 
-    display: flex;
-
-    gap: 7px;
-
-    z-index: 20;
-
+    z-index:20;
 }
-
 
 .punto {
+    width:8px;
+    height:8px;
 
-    width: 8px;
-    height: 8px;
+    background:rgba(255,255,255,0.35);
 
-    background:
-        rgba(255,255,255,0.35);
-
-    border-radius: 50%;
+    border-radius:50%;
 
     box-shadow:
-        0 0 5px
-        rgba(199,125,255,0.4);
-
-    transition:
-        0.3s;
-
+        0 0 5px rgba(199,125,255,0.4);
 }
 
-
 .punto.activo {
-
-    background:
-        #c77dff;
+    background:#c77dff;
 
     box-shadow:
         0 0 6px #c77dff,
         0 0 12px #a855f7;
 
-    transform:
-        scale(1.35);
-
-}
-
-
-/* ========================= */
-/* PRODUCTOS */
-/* ========================= */
-
-.producto {
-
-    position: relative;
-
-    z-index: 2;
-
-    background-color:
-        #050008;
-
-    width: 100%;
-
-    margin:
-        22px 0;
-
-    padding:
-        18px;
-
-    border-radius:
-        12px;
-
-    border:
-        1px solid #8a2be2;
-
-    box-shadow:
-        0 0 6px #8a2be2,
-        0 0 15px
-        rgba(138,43,226,0.6),
-        inset 0 0 10px
-        rgba(138,43,226,0.15);
-
-}
-
-
-.producto h3 {
-
-    color:
-        #E1BEE7;
-
-    font-size:
-        22px;
-
-    margin-top:
-        12px;
-
-}
-
-
-.descripcion {
-
-    color:
-        violet;
-
-    font-size:
-        17px;
-
-    line-height:
-        1.5;
-
-    margin:
-        10px 0;
-
-}
-
-
-.precio {
-
-    color:
-        #80DEEA;
-
-    font-size:
-        22px;
-
-    font-weight:
-        bold;
-
-    margin:
-        12px 0;
-
+    transform:scale(1.35);
 }
 
 
@@ -473,110 +171,126 @@ body {
 
 .boton-comprar {
 
-    position:
-        relative;
+    position:relative;
 
-    overflow:
-        hidden;
+    overflow:hidden;
 
-    background-color:
-        #99E89D;
+    background-color:#99E89D;
 
-    color:
-        white;
+    color:white;
 
-    padding:
-        10px 20px;
+    padding:10px 20px;
 
-    border-radius:
-        5px;
+    border-radius:5px;
 
-    font-weight:
-        bold;
+    font-weight:bold;
 
-    text-decoration:
-        none;
+    text-decoration:none;
 
-    display:
-        inline-block;
+    display:inline-block;
 
     box-shadow:
         0 0 5px #c77dff,
         0 0 15px #a855f7;
-
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-
 }
 
 
-.boton-comprar::after {
+/* ========================= */
+/* CONTENEDOR PRODUCTOS */
+/* ========================= */
 
-    content:
-        "";
+.producto {
 
-    position:
-        absolute;
+    position:relative;
 
-    top:
-        -50%;
+    z-index:2;
 
-    left:
-        -100%;
+    background-color:#050008;
 
-    width:
-        45%;
+    width:100%;
 
-    height:
-        200%;
+    box-sizing:border-box;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,0.95),
-            rgba(255,255,255,0.5),
-            transparent
-        );
+    margin:22px 0;
 
-    transform:
-        rotate(20deg);
+    padding:18px;
 
-    transition:
-        left 0.45s ease;
+    border-radius:12px;
 
-}
-
-
-.boton-comprar:hover {
-
-    transform:
-        scale(1.05);
+    border:1px solid #8a2be2;
 
     box-shadow:
-        0 0 10px #c77dff,
-        0 0 25px #a855f7,
-        0 0 40px #8a2be2;
-
+        0 0 6px #8a2be2,
+        0 0 15px rgba(138,43,226,0.6),
+        inset 0 0 10px rgba(138,43,226,0.15);
 }
 
 
-.boton-comprar:hover::after {
+/* ========================= */
+/* CARRUSEL */
+/* ========================= */
 
-    left:
-        150%;
+.carrusel {
 
+    position:relative;
+
+    width:100%;
+
+    height:300px;
+
+    overflow:hidden;
+}
+
+.carrusel img {
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:contain;
+
+    display:block;
 }
 
 
-.boton-comprar:active {
+/* ========================= */
+/* BOTONES CARRUSEL */
+/* ========================= */
 
-    transform:
-        scale(0.97);
+.boton-carrusel {
 
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(0,0,0,0.6);
+
+    color:white;
+
+    border:none;
+
+    border-radius:50%;
+
+    width:40px;
+
+    height:40px;
+
+    font-size:25px;
+
+    z-index:5;
+
+    cursor:pointer;
 }
 
+.boton-izquierdo {
+    left:5px;
+}
+
+.boton-derecho {
+    right:5px;
+}
 
 </style>
 
@@ -594,411 +308,286 @@ body {
 
 
 <!-- ========================= -->
-<!-- PARTÍCULAS -->
+<!-- PARTÍCULAS FIJAS -->
 <!-- ========================= -->
 
-<div class="particula"
-     style="top:120px;left:8%;"></div>
-
-<div class="particula"
-     style="top:280px;left:25%;"></div>
-
-<div class="particula"
-     style="top:450px;right:12%;"></div>
-
-<div class="particula"
-     style="top:620px;left:42%;"></div>
-
-<div class="particula"
-     style="top:800px;right:28%;"></div>
-
-<div class="particula"
-     style="top:980px;left:12%;"></div>
-
-<div class="particula"
-     style="top:1160px;right:15%;"></div>
-
-<div class="particula"
-     style="top:1340px;left:35%;"></div>
-
-<div class="particula"
-     style="top:1520px;right:40%;"></div>
-
-<div class="particula"
-     style="top:1700px;left:18%;"></div>
-
-<div class="particula"
-     style="top:1880px;right:10%;"></div>
-
-<div class="particula"
-     style="top:2060px;left:45%;"></div>
-
-<div class="particula"
-     style="top:2240px;right:25%;"></div>
-
-<div class="particula"
-     style="top:2420px;left:10%;"></div>
-
-<div class="particula"
-     style="top:2600px;right:18%;"></div>
-
-<div class="particula"
-     style="top:2780px;left:30%;"></div>
-
-<div class="particula"
-     style="top:2960px;right:35%;"></div>
-
-<div class="particula"
-     style="top:3140px;left:20%;"></div>
-
-<div class="particula"
-     style="top:3320px;right:8%;"></div>
-
-<div class="particula"
-     style="top:3500px;left:40%;"></div>
-
-<div class="particula"
-     style="top:3680px;right:30%;"></div>
-
-<div class="particula"
-     style="top:3860px;left:15%;"></div>
-
-<div class="particula"
-     style="top:4040px;right:20%;"></div>
+<div class="particula" style="top:120px;left:8%;"></div>
+<div class="particula" style="top:280px;left:25%;"></div>
+<div class="particula" style="top:450px;right:12%;"></div>
+<div class="particula" style="top:620px;left:42%;"></div>
+<div class="particula" style="top:800px;right:28%;"></div>
+<div class="particula" style="top:980px;left:12%;"></div>
+<div class="particula" style="top:1160px;right:15%;"></div>
+<div class="particula" style="top:1340px;left:35%;"></div>
+<div class="particula" style="top:1520px;right:40%;"></div>
+<div class="particula" style="top:1700px;left:18%;"></div>
+<div class="particula" style="top:1880px;right:10%;"></div>
+<div class="particula" style="top:2060px;left:45%;"></div>
+<div class="particula" style="top:2240px;right:25%;"></div>
+<div class="particula" style="top:2420px;left:10%;"></div>
+<div class="particula" style="top:2600px;right:18%;"></div>
+<div class="particula" style="top:2780px;left:30%;"></div>
+<div class="particula" style="top:2960px;right:35%;"></div>
+<div class="particula" style="top:3140px;left:20%;"></div>
+<div class="particula" style="top:3320px;right:8%;"></div>
+<div class="particula" style="top:3500px;left:40%;"></div>
+<div class="particula" style="top:3680px;right:30%;"></div>
+<div class="particula" style="top:3860px;left:15%;"></div>
+<div class="particula" style="top:4040px;right:20%;"></div>
 
 
 <!-- ========================= -->
-<!-- DESTELLOS -->
+<!-- DESTELLOS FIJOS -->
 <!-- ========================= -->
 
-<div class="destello"
-     style="top:300px;left:25px;">
-    ✦
-</div>
+<div class="destello" style="top:300px;left:25px;">✦</div>
+<div class="destello" style="top:550px;right:25px;">✦</div>
 
-<div class="destello"
-     style="top:550px;right:25px;">
-    ✦
-</div>
+<div class="destello" style="top:800px;left:40px;">✦</div>
+<div class="destello" style="top:1050px;right:40px;">✦</div>
 
-<div class="destello"
-     style="top:800px;left:40px;">
-    ✦
-</div>
+<div class="destello" style="top:1300px;left:20px;">✦</div>
+<div class="destello" style="top:1550px;right:30px;">✦</div>
 
-<div class="destello"
-     style="top:1050px;right:40px;">
-    ✦
-</div>
+<div class="destello" style="top:1800px;left:45px;">✦</div>
+<div class="destello" style="top:2050px;right:45px;">✦</div>
 
-<div class="destello"
-     style="top:1300px;left:20px;">
-    ✦
-</div>
+<div class="destello" style="top:2300px;left:25px;">✦</div>
+<div class="destello" style="top:2550px;right:25px;">✦</div>
 
-<div class="destello"
-     style="top:1550px;right:30px;">
-    ✦
-</div>
+<div class="destello" style="top:2800px;left:40px;">✦</div>
+<div class="destello" style="top:3050px;right:40px;">✦</div>
 
-<div class="destello"
-     style="top:1800px;left:45px;">
-    ✦
-</div>
+<div class="destello" style="top:3300px;left:20px;">✦</div>
+<div class="destello" style="top:3550px;right:30px;">✦</div>
 
-<div class="destello"
-     style="top:2050px;right:45px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:2300px;left:25px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:2550px;right:25px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:2800px;left:40px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:3050px;right:40px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:3300px;left:20px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:3550px;right:30px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:3800px;left:45px;">
-    ✦
-</div>
-
-<div class="destello"
-     style="top:4050px;right:45px;">
-    ✦
-</div>
+<div class="destello" style="top:3800px;left:45px;">✦</div>
+<div class="destello" style="top:4050px;right:45px;">✦</div>
 
 
 <!-- ========================= -->
 <!-- ENCABEZADO -->
 <!-- ========================= -->
 
-<header>
-
-<div style="
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-    padding-top:10px;
+<header style="
+    position:relative;
+    z-index:2;
 ">
 
-
-<!-- LÍNEAS IZQUIERDA -->
-
-<div style="
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-    width:80px;
-">
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to right,
-        transparent,
-        #c77dff
-    );
-"></span>
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to right,
-        transparent,
-        #c77dff
-    );
-    opacity:0.6;
-"></span>
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to right,
-        transparent,
-        #c77dff
-    );
-    opacity:0.3;
-"></span>
-
-</div>
+    <div style="
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:20px;
+    ">
 
 
-<!-- RAVOX -->
+        <!-- LÍNEAS IZQUIERDA -->
 
-<h1 style="
-    color:#d6a3ff;
-    font-size:60px;
-    margin:0;
-    white-space:nowrap;
+        <div style="
+            display:flex;
+            flex-direction:column;
+            gap:5px;
+            width:80px;
+        ">
 
-    text-shadow:
-        0 0 5px #c77dff,
-        0 0 15px #8a2be2;
-">
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to right,
+                    transparent,
+                    #c77dff
+                );
+            "></span>
 
-RAVOX
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to right,
+                    transparent,
+                    #c77dff
+                );
+                opacity:.6;
+            "></span>
 
-</h1>
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to right,
+                    transparent,
+                    #c77dff
+                );
+                opacity:.3;
+            "></span>
 
-
-<!-- LÍNEAS DERECHA -->
-
-<div style="
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-    width:80px;
-">
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to left,
-        transparent,
-        #c77dff
-    );
-"></span>
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to left,
-        transparent,
-        #c77dff
-    );
-    opacity:0.6;
-"></span>
-
-<span style="
-    height:2px;
-    background:linear-gradient(
-        to left,
-        transparent,
-        #c77dff
-    );
-    opacity:0.3;
-"></span>
-
-</div>
-
-</div>
+        </div>
 
 
-<!-- MOTO LIGHTING -->
-
-<div style="
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:25px;
-    margin-top:-10px;
-">
-
-<div style="
-    width:120px;
-    height:3px;
-    background-color:#d6b3ff;
-"></div>
-
-<h2 style="
-    color:#d6b3ff;
-    font-size:32px;
-    margin:0;
-    white-space:nowrap;
-">
-
-MOTO LIGHTING
-
-</h2>
-
-<div style="
-    width:120px;
-    height:3px;
-    background-color:#d6b3ff;
-"></div>
-
-</div>
+        <h1 style="
+            color:#d6a3ff;
+            font-size:60px;
+            margin:0;
+            white-space:nowrap;
+        ">
+            RAVOX
+        </h1>
 
 
-<!-- SILUETA -->
+        <!-- LÍNEAS DERECHA -->
 
-<div style="
-    text-align:center;
-    margin-top:20px;
-    margin-bottom:15px;
-">
+        <div style="
+            display:flex;
+            flex-direction:column;
+            gap:5px;
+            width:80px;
+        ">
 
-<img
-    src="Silueta.png"
-    alt="Silueta"
-    style="
-        width:180px;
-        height:auto;
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to left,
+                    transparent,
+                    #c77dff
+                );
+            "></span>
 
-        filter:
-            drop-shadow(0 0 8px #c77dff)
-            drop-shadow(0 0 18px #c77dff)
-            drop-shadow(0 0 30px #8a2be2);
-    "
->
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to left,
+                    transparent,
+                    #c77dff
+                );
+                opacity:.6;
+            "></span>
 
-</div>
+            <span style="
+                height:2px;
+                background:linear-gradient(
+                    to left,
+                    transparent,
+                    #c77dff
+                );
+                opacity:.3;
+            "></span>
 
+        </div>
 
-<p style="
-    color:white;
-    text-align:center;
-    padding:0 10px;
-">
-
-Bienvenido, aquí encuentras las mejores luces para tu vehículo
-
-</p>
-
-
-<!-- NUESTROS PRODUCTOS -->
-
-<div style="
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    margin:25px 0;
-">
-
-<div style="
-    flex:1;
-    max-width:100px;
-    height:2px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            #8a2be2,
-            #d6a3ff
-        );
-"></div>
+    </div>
 
 
-<h2 style="
-    margin:0;
-    color:#d6a3ff;
-    font-size:28px;
-    text-align:center;
-    white-space:nowrap;
+    <!-- MOTO LIGHTING -->
 
-    text-shadow:
-        0 0 5px #c77dff,
-        0 0 12px #a855f7,
-        0 0 22px #8a2be2;
-">
+    <div style="
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:25px;
+        margin-top:-10px;
+    ">
 
-NUESTROS PRODUCTOS
+        <div style="
+            width:120px;
+            height:3px;
+            background-color:#d6b3ff;
+        "></div>
 
-</h2>
+        <h2 style="
+            color:#d6b3ff;
+            font-size:32px;
+            margin:0;
+            white-space:nowrap;
+        ">
+            MOTO LIGHTING
+        </h2>
+
+        <div style="
+            width:120px;
+            height:3px;
+            background-color:#d6b3ff;
+        "></div>
+
+    </div>
 
 
-<div style="
-    flex:1;
-    max-width:100px;
-    height:2px;
+    <!-- SILUETA -->
 
-    background:
-        linear-gradient(
-            to left,
-            transparent,
-            #8a2be2,
-            #d6a3ff
-        );
-"></div>
+    <div style="
+        text-align:center;
+        margin-top:20px;
+        margin-bottom:15px;
+    ">
 
-</div>
+        <img
+            src="Silueta.png"
+            alt="Silueta"
+            style="
+                width:180px;
+                height:auto;
+
+                filter:
+                    drop-shadow(0 0 8px #c77dff)
+                    drop-shadow(0 0 18px #c77dff)
+                    drop-shadow(0 0 30px #8a2be2);
+            "
+        >
+
+    </div>
+
+
+    <p style="
+        color:white;
+        text-align:center;
+    ">
+        Bienvenido, aquí encuentras las mejores luces para tu vehículo
+    </p>
+
+
+    <!-- TÍTULO -->
+
+    <div style="
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:12px;
+        margin:25px 0;
+    ">
+
+        <div style="
+            flex:1;
+            max-width:100px;
+            height:2px;
+            background:linear-gradient(
+                to right,
+                transparent,
+                #8a2be2,
+                #d6a3ff
+            );
+        "></div>
+
+        <h2 style="
+            margin:0;
+            color:#d6a3ff;
+            font-size:28px;
+            text-align:center;
+            white-space:nowrap;
+        ">
+            NUESTROS PRODUCTOS
+        </h2>
+
+        <div style="
+            flex:1;
+            max-width:100px;
+            height:2px;
+            background:linear-gradient(
+                to left,
+                transparent,
+                #8a2be2,
+                #d6a3ff
+            );
+        "></div>
+
+    </div>
 
 </header>
 
@@ -1009,8 +598,11 @@ NUESTROS PRODUCTOS
 
 <div class="producto">
 
-<h3>
-2 piezas de luz LED de 3 lupas para auto/moto
+<h3 style="
+    color:#E1BEE7;
+    font-size:22px;
+">
+    2 piezas de luz LED de 3 lupas para auto/moto
 </h3>
 
 
@@ -1018,31 +610,26 @@ NUESTROS PRODUCTOS
 
 <img
     id="imagenCarrusel"
-    class="imagen-carrusel"
     src="Luces.jpg"
     alt="Luz auxiliar LED"
 >
 
 
 <button
-    type="button"
     class="boton-carrusel boton-izquierdo"
+    type="button"
     onclick="imagenAnterior(1)"
 >
-
-‹
-
+    ‹
 </button>
 
 
 <button
-    type="button"
     class="boton-carrusel boton-derecho"
+    type="button"
     onclick="imagenSiguiente(1)"
 >
-
-›
-
+    ›
 </button>
 
 
@@ -1051,40 +638,42 @@ NUESTROS PRODUCTOS
     id="indicadores1"
 >
 
-<span class="punto activo"></span>
-<span class="punto"></span>
-<span class="punto"></span>
+    <span class="punto activo"></span>
+    <span class="punto"></span>
+    <span class="punto"></span>
 
 </div>
 
 </div>
 
 
-<p class="descripcion">
-
-Modo 1: Blanco 6000K<br>
-Modo 2: Amarillo 4500K<br>
-Modo 3: Amarillo + Blanco 3500K
-
-</p>
-
-
-<p class="precio">
-$280 MXN
-</p>
-
-
-<div style="
-    text-align:center;
+<p style="
+    color:violet;
+    font-size:17px;
+    line-height:1.5;
 ">
+    modo 1: Blanco 6000k<br>
+    modo 2: Amarillo 4500k<br>
+    modo 3: Amarillo+Blanco 3500k
+</p>
+
+
+<p style="
+    color:#80DEEA;
+    font-size:22px;
+    font-weight:bold;
+">
+    $280 MXN
+</p>
+
+
+<div style="text-align:center;">
 
 <a
     class="boton-comprar"
     href="https://link.mercadopago.com.mx/ravoxmotolighting"
 >
-
-Comprar
-
+    Comprar
 </a>
 
 </div>
@@ -1098,8 +687,11 @@ Comprar
 
 <div class="producto">
 
-<h3>
-2 piezas de luz LED con forma de búho para auto/moto
+<h3 style="
+    color:#E1BEE7;
+    font-size:22px;
+">
+    2 piezas de luz LED con forma de búho para auto/moto
 </h3>
 
 
@@ -1107,31 +699,26 @@ Comprar
 
 <img
     id="imagenCarrusel2"
-    class="imagen-carrusel"
     src="Luces 4.png"
     alt="Luz LED búho"
 >
 
 
 <button
-    type="button"
     class="boton-carrusel boton-izquierdo"
+    type="button"
     onclick="imagenAnterior(2)"
 >
-
-‹
-
+    ‹
 </button>
 
 
 <button
-    type="button"
     class="boton-carrusel boton-derecho"
+    type="button"
     onclick="imagenSiguiente(2)"
 >
-
-›
-
+    ›
 </button>
 
 
@@ -1140,40 +727,42 @@ Comprar
     id="indicadores2"
 >
 
-<span class="punto activo"></span>
-<span class="punto"></span>
-<span class="punto"></span>
+    <span class="punto activo"></span>
+    <span class="punto"></span>
+    <span class="punto"></span>
 
 </div>
 
 </div>
 
 
-<p class="descripcion">
-
-Modo 1: Amarillo + Blanco 3000K<br>
-Modo 2: Blanco 6000K<br>
-Modo 3: Amarillo 4500K
-
-</p>
-
-
-<p class="precio">
-$250 MXN
-</p>
-
-
-<div style="
-    text-align:center;
+<p style="
+    color:violet;
+    font-size:17px;
+    line-height:1.5;
 ">
+    modo 1: Amarillo + Blanco 3000k<br>
+    modo 2: Blanco 6000k<br>
+    modo 3: Amarillo 4500k
+</p>
+
+
+<p style="
+    color:#80DEEA;
+    font-size:22px;
+    font-weight:bold;
+">
+    $250 MXN
+</p>
+
+
+<div style="text-align:center;">
 
 <a
     class="boton-comprar"
     href="https://link.mercadopago.com.mx/ravoxmotolighting"
 >
-
-Comprar
-
+    Comprar
 </a>
 
 </div>
@@ -1187,8 +776,11 @@ Comprar
 
 <div class="producto">
 
-<h3>
-2 piezas de luz LED con 2 modalidades para auto/moto
+<h3 style="
+    color:#E1BEE7;
+    font-size:22px;
+">
+    2 piezas de luz LED con 2 modalidades para auto/moto
 </h3>
 
 
@@ -1196,31 +788,26 @@ Comprar
 
 <img
     id="imagenCarrusel3"
-    class="imagen-carrusel"
     src="Luces 7.png"
     alt="Producto 3"
 >
 
 
 <button
-    type="button"
     class="boton-carrusel boton-izquierdo"
+    type="button"
     onclick="imagenAnterior(3)"
 >
-
-‹
-
+    ‹
 </button>
 
 
 <button
-    type="button"
     class="boton-carrusel boton-derecho"
+    type="button"
     onclick="imagenSiguiente(3)"
 >
-
-›
-
+    ›
 </button>
 
 
@@ -1229,39 +816,41 @@ Comprar
     id="indicadores3"
 >
 
-<span class="punto activo"></span>
-<span class="punto"></span>
-<span class="punto"></span>
+    <span class="punto activo"></span>
+    <span class="punto"></span>
+    <span class="punto"></span>
 
 </div>
 
 </div>
 
 
-<p class="descripcion">
-
-Modo 1: Blanca 6000K<br>
-Modo 2: Amarilla 3000K
-
-</p>
-
-
-<p class="precio">
-$150 MXN
-</p>
-
-
-<div style="
-    text-align:center;
+<p style="
+    color:violet;
+    font-size:17px;
+    line-height:1.5;
 ">
+    modo 1: Blanca 6000k<br>
+    modo 2: Amarilla 3000k
+</p>
+
+
+<p style="
+    color:#80DEEA;
+    font-size:22px;
+    font-weight:bold;
+">
+    $150 MXN
+</p>
+
+
+<div style="text-align:center;">
 
 <a
     class="boton-comprar"
     href="https://link.mercadopago.com.mx/ravoxmotolighting"
 >
-
-Comprar
-
+    Comprar
 </a>
 
 </div>
@@ -1275,8 +864,11 @@ Comprar
 
 <div class="producto">
 
-<h3>
-2 piezas de luz LED con 4 modalidades para auto/moto
+<h3 style="
+    color:#E1BEE7;
+    font-size:22px;
+">
+    2 piezas de luz LED con 4 modalidades para auto/moto
 </h3>
 
 
@@ -1284,31 +876,26 @@ Comprar
 
 <img
     id="imagenCarrusel4"
-    class="imagen-carrusel"
     src="Luces 10.png"
     alt="Producto 4"
 >
 
 
 <button
-    type="button"
     class="boton-carrusel boton-izquierdo"
+    type="button"
     onclick="imagenAnterior(4)"
 >
-
-‹
-
+    ‹
 </button>
 
 
 <button
-    type="button"
     class="boton-carrusel boton-derecho"
+    type="button"
     onclick="imagenSiguiente(4)"
 >
-
-›
-
+    ›
 </button>
 
 
@@ -1317,41 +904,43 @@ Comprar
     id="indicadores4"
 >
 
-<span class="punto activo"></span>
-<span class="punto"></span>
-<span class="punto"></span>
+    <span class="punto activo"></span>
+    <span class="punto"></span>
+    <span class="punto"></span>
 
 </div>
 
 </div>
 
 
-<p class="descripcion">
-
-Modo 1: Amarillo fijo 3000K<br>
-Modo 2: Blanco 6000K<br>
-Modo 3: Amarillo + blanco fijo 4500K<br>
-Modo 4: Estroboscópico amarillo + blanco + luz estroboscópica azul
-
-</p>
-
-
-<p class="precio">
-$220 MXN
-</p>
-
-
-<div style="
-    text-align:center;
+<p style="
+    color:violet;
+    font-size:17px;
+    line-height:1.5;
 ">
+    Modo 1: Amarillo fijo 3000K<br>
+    Modo 2: Blanco 6000K<br>
+    Modo 3: Amarillo + blanco fijo 4500K<br>
+    Modo 4: Estroboscópico amarillo + blanco + luz estroboscópica azul
+</p>
+
+
+<p style="
+    color:#80DEEA;
+    font-size:22px;
+    font-weight:bold;
+">
+    $220 MXN
+</p>
+
+
+<div style="text-align:center;">
 
 <a
     class="boton-comprar"
     href="https://link.mercadopago.com.mx/ravoxmotolighting"
 >
-
-Comprar
-
+    Comprar
 </a>
 
 </div>
@@ -1365,8 +954,11 @@ Comprar
 
 <div class="producto">
 
-<h3>
-2 piezas de luz LED con 8 modalidades para auto/moto
+<h3 style="
+    color:#E1BEE7;
+    font-size:22px;
+">
+    2 piezas de luz LED con 8 modalidades para auto/moto
 </h3>
 
 
@@ -1374,31 +966,26 @@ Comprar
 
 <img
     id="imagenCarrusel5"
-    class="imagen-carrusel"
     src="Luces 13.png"
     alt="Producto 5"
 >
 
 
 <button
-    type="button"
     class="boton-carrusel boton-izquierdo"
+    type="button"
     onclick="imagenAnterior(5)"
 >
-
-‹
-
+    ‹
 </button>
 
 
 <button
-    type="button"
     class="boton-carrusel boton-derecho"
+    type="button"
     onclick="imagenSiguiente(5)"
 >
-
-›
-
+    ›
 </button>
 
 
@@ -1407,38 +994,31 @@ Comprar
     id="indicadores5"
 >
 
-<span class="punto activo"></span>
-<span class="punto"></span>
-<span class="punto"></span>
+    <span class="punto activo"></span>
+    <span class="punto"></span>
+    <span class="punto"></span>
 
 </div>
 
 </div>
 
 
-<p class="descripcion">
-
-8 modalidades de iluminación para diferentes estilos.
-
-</p>
-
-
-<p class="precio">
-$280 MXN
-</p>
-
-
-<div style="
-    text-align:center;
+<p style="
+    color:#80DEEA;
+    font-size:22px;
+    font-weight:bold;
 ">
+    $250 MXN
+</p>
+
+
+<div style="text-align:center;">
 
 <a
     class="boton-comprar"
     href="https://link.mercadopago.com.mx/ravoxmotolighting"
 >
-
-Comprar
-
+    Comprar
 </a>
 
 </div>
@@ -1446,87 +1026,88 @@ Comprar
 </div>
 
 
-
-
 <!-- ====================================================== -->
-<!-- JAVASCRIPT -->
+<!-- JAVASCRIPT DEL CARRUSEL -->
 <!-- ====================================================== -->
 
 <script>
 
-
 const carruseles = {
 
-    1: [
-        "Luces.jpg",
-        "Luces 2.png",
-        "Luces 3.png"
-    ],
+    1: {
+        imagenes: [
+            "Luces.jpg",
+            "Luces 2.png",
+            "Luces 3.png"
+        ],
+        posicion: 0
+    },
 
-    2: [
-        "Luces 4.png",
-        "Luces 5.png",
-        "Luces 6.png"
-    ],
+    2: {
+        imagenes: [
+            "Luces 4.png",
+            "Luces 5.png",
+            "Luces 6.png"
+        ],
+        posicion: 0
+    },
 
-    3: [
-        "Luces 7.png",
-        "Luces 8.png",
-        "Luces 9.png"
-    ],
+    3: {
+        imagenes: [
+            "Luces 7.png",
+            "Luces 8.png",
+            "Luces 9.png"
+        ],
+        posicion: 0
+    },
 
-    4: [
-        "Luces 10.png",
-        "Luces 11.png",
-        "Luces 12.png"
-    ],
+    4: {
+        imagenes: [
+            "Luces 10.png",
+            "Luces 11.png",
+            "Luces 12.png"
+        ],
+        posicion: 0
+    },
 
-    5: [
-        "Luces 13.png",
-        "Luces 14.png",
-        "Luces 15.png"
-    ]
+    5: {
+        imagenes: [
+            "Luces 13.png",
+            "Luces 14.png",
+            "Luces 15.png"
+        ],
+        posicion: 0
+    }
 
 };
 
 
-const posiciones = {
+function cambiarImagen(numero, direccion) {
 
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0
+    const carrusel = carruseles[numero];
 
-};
+    carrusel.posicion += direccion;
 
 
-function obtenerImagen(numero) {
+    if (carrusel.posicion >= carrusel.imagenes.length) {
 
-    if (numero === 1) {
-
-        return document.getElementById(
-            "imagenCarrusel"
-        );
+        carrusel.posicion = 0;
 
     }
 
-    return document.getElementById(
-        "imagenCarrusel" + numero
-    );
 
-}
+    if (carrusel.posicion < 0) {
+
+        carrusel.posicion =
+            carrusel.imagenes.length - 1;
+
+    }
 
 
-function cambiarImagen(numero) {
-
-    const imagen =
-        obtenerImagen(numero);
-
-    imagen.src =
-        carruseles[numero][
-            posiciones[numero]
-        ];
+    document.getElementById(
+        "imagenCarrusel" + (numero === 1 ? "" : numero)
+    ).src =
+        carrusel.imagenes[carrusel.posicion];
 
 
     actualizarPuntos(numero);
@@ -1536,36 +1117,14 @@ function cambiarImagen(numero) {
 
 function imagenSiguiente(numero) {
 
-    posiciones[numero]++;
-
-    if (
-        posiciones[numero] >=
-        carruseles[numero].length
-    ) {
-
-        posiciones[numero] = 0;
-
-    }
-
-    cambiarImagen(numero);
+    cambiarImagen(numero, 1);
 
 }
 
 
 function imagenAnterior(numero) {
 
-    posiciones[numero]--;
-
-    if (
-        posiciones[numero] < 0
-    ) {
-
-        posiciones[numero] =
-            carruseles[numero].length - 1;
-
-    }
-
-    cambiarImagen(numero);
+    cambiarImagen(numero, -1);
 
 }
 
@@ -1579,79 +1138,26 @@ function actualizarPuntos(numero) {
 
 
     const puntos =
-        contenedor.querySelectorAll(
-            ".punto"
-        );
+        contenedor.querySelectorAll(".punto");
 
 
-    puntos.forEach(
-        function(punto, indice) {
+    puntos.forEach(function(punto, indice) {
 
-            punto.classList.remove(
-                "activo"
-            );
+        punto.classList.remove("activo");
 
 
-            if (
-                indice ===
-                posiciones[numero]
-            ) {
+        if (
+            indice ===
+            carruseles[numero].posicion
+        ) {
 
-                punto.classList.add(
-                    "activo"
-                );
-
-            }
+            punto.classList.add("activo");
 
         }
-    );
+
+    });
 
 }
-
-
-/* ========================= */
-/* CAMBIO AUTOMÁTICO */
-/* ========================= */
-
-setInterval(
-    function() {
-        imagenSiguiente(1);
-    },
-    4000
-);
-
-
-setInterval(
-    function() {
-        imagenSiguiente(2);
-    },
-    4500
-);
-
-
-setInterval(
-    function() {
-        imagenSiguiente(3);
-    },
-    5000
-);
-
-
-setInterval(
-    function() {
-        imagenSiguiente(4);
-    },
-    5500
-);
-
-
-setInterval(
-    function() {
-        imagenSiguiente(5);
-    },
-    6000
-);
-
 
 </script>
 
