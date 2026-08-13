@@ -10,7 +10,6 @@
 
 <title>Ravox Moto Lighting</title>
 
-
 <style>
 
 /* ================================================= */
@@ -159,8 +158,6 @@
 }
 
 
-/* BRILLO */
-
 .boton-comprar::after {
 
     content: "";
@@ -168,9 +165,11 @@
     position: absolute;
 
     top: -50%;
+
     left: -100%;
 
     width: 45%;
+
     height: 200%;
 
     background: linear-gradient(
@@ -186,8 +185,6 @@
     transition: left 0.45s ease;
 }
 
-
-/* MOUSE */
 
 .boton-comprar:hover {
 
@@ -205,8 +202,6 @@
     left: 150%;
 }
 
-
-/* DEDO */
 
 .boton-comprar:active {
 
@@ -399,9 +394,11 @@
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 100vh;
 
     background: #050509;
@@ -412,10 +409,10 @@
 
     align-items: center;
 
-    z-index: 99999;
+    z-index: 9999;
 
     animation:
-        desaparecerEntrada 1s ease 5s forwards;
+        desaparecerEntrada 1s ease 4s forwards;
 }
 
 
@@ -428,7 +425,7 @@
     text-align: center;
 
     animation:
-        aparecerLogo 5s ease forwards;
+        aparecerLogo 1s ease forwards;
 }
 
 
@@ -470,12 +467,12 @@
     opacity: 0;
 
     animation:
-        aparecerSubtitulo 1s ease 5s forwards;
+        aparecerSubtitulo 1s ease 0.7s forwards;
 }
 
 
 /* ================================================= */
-/* LÍNEA DE ENTRADA */
+/* LÍNEA */
 /* ================================================= */
 
 .linea-entrada {
@@ -493,7 +490,7 @@
         0 0 20px #8a2be2;
 
     animation:
-        expandirLinea 1s ease 2.5s forwards;
+        expandirLinea 1s ease 1s forwards;
 }
 
 
@@ -507,9 +504,7 @@
 
         opacity: 0;
 
-        transform: scale(0.7);
-
-        filter: blur(10px);
+        transform: scale(0.85);
 
     }
 
@@ -518,8 +513,6 @@
         opacity: 1;
 
         transform: scale(1);
-
-        filter: blur(0);
 
     }
 }
@@ -563,6 +556,14 @@
 
 @keyframes desaparecerEntrada {
 
+    from {
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
     to {
 
         opacity: 0;
@@ -575,6 +576,7 @@
 }
 
 </style>
+
 
 </head>
 
@@ -614,7 +616,27 @@
 
     position: relative;
 ">
+<!-- ================================================= -->
+<!-- PANTALLA DE ENTRADA RAVOX -->
+<!-- ================================================= -->
 
+<div id="pantalla-inicio">
+
+    <div class="logo-entrada">
+
+        <div class="ravox-entrada">
+            RAVOX
+        </div>
+
+        <div class="moto-lighting-entrada">
+            MOTO LIGHTING
+        </div>
+
+        <div class="linea-entrada"></div>
+
+    </div>
+
+</div>
 
 <!-- ================================================= -->
 <!-- FONDO -->
