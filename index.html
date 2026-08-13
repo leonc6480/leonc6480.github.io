@@ -517,52 +517,52 @@ style="top:4040px;right:20%;width:3px;height:3px;"></div>
 <!-- ================================================= -->
 
 <div class="destello"
-style="top:300px;left:25px;">✦</div>
+style="top:300px;left:25px;"></div>
 
 <div class="destello"
-style="top:550px;right:25px;">✦</div>
+style="top:550px;right:25px;"></div>
 
 <div class="destello"
-style="top:800px;left:40px;">✦</div>
+style="top:800px;left:40px;"></div>
 
 <div class="destello"
-style="top:1050px;right:40px;">✦</div>
+style="top:1050px;right:40px;"></div>
 
 <div class="destello"
-style="top:1300px;left:20px;">✦</div>
+style="top:1300px;left:20px;"></div>
 
 <div class="destello"
-style="top:1550px;right:30px;">✦</div>
+style="top:1550px;right:30px;"></div>
 
 <div class="destello"
-style="top:1800px;left:45px;">✦</div>
+style="top:1800px;left:45px;"></div>
 
 <div class="destello"
-style="top:2050px;right:45px;">✦</div>
+style="top:2050px;right:45px;"></div>
 
 <div class="destello"
-style="top:2300px;left:25px;">✦</div>
+style="top:2300px;left:25px;"></div>
 
 <div class="destello"
-style="top:2550px;right:25px;">✦</div>
+style="top:2550px;right:25px;"></div>
 
 <div class="destello"
-style="top:2800px;left:40px;">✦</div>
+style="top:2800px;left:40px;"></div>
 
 <div class="destello"
-style="top:3050px;right:40px;">✦</div>
+style="top:3050px;right:40px;"></div>
 
 <div class="destello"
-style="top:3300px;left:20px;">✦</div>
+style="top:3300px;left:20px;"></div>
 
 <div class="destello"
-style="top:3550px;right:30px;">✦</div>
+style="top:3550px;right:30px;"></div>
 
 <div class="destello"
-style="top:3800px;left:45px;">✦</div>
+style="top:3800px;left:45px;"></div>
 
 <div class="destello"
-style="top:4050px;right:45px;">✦</div>
+style="top:4050px;right:45px;"></div>
 
 
 <!-- ================================================= -->
@@ -909,9 +909,7 @@ Comprar
 </a>
 
 </div>
-
 </div>
-
 
 <!-- ================================================= -->
 <!-- PRODUCTO 2 -->
@@ -1264,6 +1262,85 @@ Comprar
 
 <script>
 
+const URL_OPINIONES = "https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_W-OwlHLcmOQQZ4XwA9UBIiV9ghz5ezXqAZayv9o0R3u_Xvc7QG/exec";async function cargarOpiniones()  {
+
+    try {
+
+        const respuesta = await fetch(URL_OPINIONES);
+
+        const opiniones = await respuesta.json();
+
+        const contenedor =
+            document.getElementById("contenedorOpiniones");
+
+        contenedor.innerHTML = "";
+
+        opiniones.forEach(opinion => {
+
+            const tarjeta = document.createElement("div");
+
+            tarjeta.style.cssText = `
+                min-width:280px;
+                max-width:280px;
+                background:linear-gradient(145deg,#111111,#080808);
+                border:1px solid #7b2cff;
+                border-radius:15px;
+                padding:22px;
+                box-shadow:0 0 15px rgba(123,44,255,0.25);
+                scroll-snap-align:center;
+                box-sizing:border-box;
+            `;
+
+            const estrellas =
+                "★".repeat(Number(opinion.calificacion) || 0);
+
+            tarjeta.innerHTML = `
+                <div style="
+                    color:#ffd700;
+                    font-size:20px;
+                    margin-bottom:12px;
+                ">
+                    ${estrellas}
+                </div>
+
+                <p style="
+                    color:white;
+                    font-size:15px;
+                    line-height:1.5;
+                    margin:0 0 15px;
+                ">
+                    "${opinion.opinion || ""}"
+                </p>
+
+                <p style="
+                    color:#9b5cff;
+                    font-size:13px;
+                    margin:0;
+                    font-weight:bold;
+                ">
+                    — Cliente ${opinion.nombre || "Anónimo"}
+                </p>
+            `;
+
+            contenedor.appendChild(tarjeta);
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Error al cargar opiniones:",
+            error
+        );
+
+    }
+}
+
+cargarOpiniones();
+
+setInterval(cargarOpiniones, 30000);
+
+
 /* ================================================= */
 /* IMÁGENES */
 /* ================================================= */
@@ -1561,6 +1638,147 @@ function imagenAnterior5() {
 }
 
 </script>
+
+<!-- OPINIONES DE CLIENTES -->
+<section style="
+    background-color: #050505;
+    padding: 35px 15px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+">
+
+    <h2 style="
+        color: white;
+        font-size: 26px;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+    ">
+         OPINIONES DE CLIENTES
+    </h2>
+
+    <p style="
+        color: #aaa;
+        font-size: 14px;
+        margin-bottom: 25px;
+    ">
+        Lo que dicen nuestros clientes
+    </p>
+
+    <div id="contenedorOpiniones" style="
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:5px 5px 15px;
+    scrollbar-width:none;
+">
+
+
+    </div>
+
+    <p style="
+        color: #666;
+        font-size: 12px;
+        margin-top: 15px;
+    ">
+        Desliza para ver más opiniones 
+    </p>
+
+</section>
+
+<!-- DEJAR UNA OPINIÓN -->
+<section style="
+    background:#050505;
+    padding:30px 15px;
+    text-align:center;
+    color:white;
+    font-family:Arial,sans-serif;
+">
+
+    <h2 style="
+        font-size:24px;
+        letter-spacing:2px;
+        margin-bottom:8px;
+    ">
+         DEJA TU OPINIÓN
+    </h2>
+
+    <p style="
+        color:#aaa;
+        font-size:14px;
+        margin-bottom:25px;
+    ">
+        Cuéntanos qué te pareció tu producto RAVOX
+    </p>
+
+    <form style="
+        max-width:450px;
+        margin:auto;
+        background:#0d0d0d;
+        border:1px solid #7b2cff;
+        border-radius:15px;
+        padding:20px;
+        box-shadow:0 0 18px rgba(123,44,255,0.25);
+        box-sizing:border-box;
+ > 
+
+        <!-- OPINIÓN -->
+        <textarea
+            placeholder="Escribe tu opinión..."
+            required
+            rows="5"
+            style="
+                width:100%;
+                padding:13px;
+                margin-bottom:15px;
+                box-sizing:border-box;
+                background:#151515;
+                border:1px solid #333;
+                border-radius:8px;
+                color:white;
+                resize:none;
+                outline:none;
+            "
+        ></textarea>
+
+        <!-- BOTÓN DEJAR UNA OPINIÓN -->
+<div style="
+    text-align:center;
+    padding:20px 15px 35px;
+    background:#050505;
+">
+
+    <a href="https://forms.gle/L7Zf56WYJbxbzhJE7"
+       target="_blank"
+       style="
+           display:inline-block;
+           padding:14px 28px;
+           background:#7b2cff;
+           color:white;
+           text-decoration:none;
+           font-family:Arial,sans-serif;
+           font-size:15px;
+           font-weight:bold;
+           letter-spacing:1px;
+           border-radius:8px;
+           box-shadow:0 0 15px rgba(123,44,255,0.45);
+           transition:0.3s;
+       "
+       onmouseover="this.style.boxShadow='0 0 25px rgba(123,44,255,0.9)'"
+       onmouseout="this.style.boxShadow='0 0 15px rgba(123,44,255,0.45)'">
+
+         DEJAR UNA OPINIÓN
+
+    </a>
+
+</div>
+
+    </form>
+
+</section>
+
 <footer style="
     background: #050505;
     color: white;
@@ -1646,14 +1864,14 @@ function imagenAnterior5() {
                     Inicio
                 </a>
 
-                <a href="#productos" style="
+                <a href="#producto" style="
                     display:block;
                     color:#999;
                     text-decoration:none;
                     margin-bottom:10px;
                     font-size:14px;
                 ">
-                    Productos
+                     producto 
                 </a>
 
                 <a href="#contacto" style="
@@ -1744,7 +1962,6 @@ function imagenAnterior5() {
     </div>
 
 </footer>
-
 </body>
 
 </html>
