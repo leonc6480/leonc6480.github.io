@@ -19,7 +19,6 @@
 .fondo-tecnologico {
 
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -27,7 +26,6 @@
     height: 100%;
 
     pointer-events: none;
-
     z-index: 0;
 
     background:
@@ -72,7 +70,6 @@
     z-index: 20;
 }
 
-
 .punto {
 
     width: 8px;
@@ -87,7 +84,6 @@
 
     transition: 0.3s;
 }
-
 
 .punto.activo {
 
@@ -157,7 +153,6 @@
         box-shadow 0.2s;
 }
 
-
 .boton-comprar::after {
 
     content: "";
@@ -165,11 +160,9 @@
     position: absolute;
 
     top: -50%;
-
     left: -100%;
 
     width: 45%;
-
     height: 200%;
 
     background: linear-gradient(
@@ -185,7 +178,6 @@
     transition: left 0.45s ease;
 }
 
-
 .boton-comprar:hover {
 
     transform: scale(1.05);
@@ -196,12 +188,10 @@
         0 0 40px #8a2be2;
 }
 
-
 .boton-comprar:hover::after {
 
     left: 150%;
 }
-
 
 .boton-comprar:active {
 
@@ -211,12 +201,6 @@
         0 0 15px #c77dff,
         0 0 30px #a855f7,
         0 0 45px #8a2be2;
-}
-
-
-.boton-comprar:active::after {
-
-    left: 150%;
 }
 
 
@@ -255,7 +239,7 @@
 
 
 /* ================================================= */
-/* TÍTULOS DE PRODUCTOS */
+/* TÍTULOS */
 /* ================================================= */
 
 .titulo-producto {
@@ -269,7 +253,7 @@
 
 
 /* ================================================= */
-/* IMÁGENES DEL CARRUSEL */
+/* CARRUSEL */
 /* ================================================= */
 
 .contenedor-carrusel {
@@ -283,7 +267,6 @@
     overflow: hidden;
 }
 
-
 .imagen-carrusel {
 
     width: 100%;
@@ -294,11 +277,6 @@
 
     display: block;
 }
-
-
-/* ================================================= */
-/* BOTONES DEL CARRUSEL */
-/* ================================================= */
 
 .boton-carrusel {
 
@@ -323,17 +301,15 @@
     font-size: 25px;
 
     z-index: 5;
+
+    cursor: pointer;
 }
 
-
 .boton-izquierda {
-
     left: 5px;
 }
 
-
 .boton-derecha {
-
     right: 5px;
 }
 
@@ -352,7 +328,6 @@
 
     margin: 10px 0;
 }
-
 
 .precio {
 
@@ -394,11 +369,9 @@
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
-
     height: 100vh;
 
     background: #050509;
@@ -406,7 +379,6 @@
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     z-index: 9999;
@@ -417,7 +389,7 @@
 
 
 /* ================================================= */
-/* LOGO DE ENTRADA */
+/* LOGO */
 /* ================================================= */
 
 .logo-entrada {
@@ -427,11 +399,6 @@
     animation:
         aparecerLogo 1s ease forwards;
 }
-
-
-/* ================================================= */
-/* RAVOX */
-/* ================================================= */
 
 .ravox-entrada {
 
@@ -449,11 +416,6 @@
         0 0 50px #8a2be2;
 }
 
-
-/* ================================================= */
-/* MOTO LIGHTING */
-/* ================================================= */
-
 .moto-lighting-entrada {
 
     margin-top: 8px;
@@ -469,11 +431,6 @@
     animation:
         aparecerSubtitulo 1s ease 0.7s forwards;
 }
-
-
-/* ================================================= */
-/* LÍNEA */
-/* ================================================= */
 
 .linea-entrada {
 
@@ -501,65 +458,45 @@
 @keyframes aparecerLogo {
 
     from {
-
         opacity: 0;
-
         transform: scale(0.85);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: scale(1);
-
     }
 }
-
 
 @keyframes aparecerSubtitulo {
 
     from {
-
         opacity: 0;
-
         transform: translateY(10px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
 }
-
 
 @keyframes expandirLinea {
 
     from {
-
         width: 0;
-
     }
 
     to {
-
         width: 180px;
-
     }
 }
-
 
 @keyframes desaparecerEntrada {
 
     from {
 
         opacity: 1;
-
         visibility: visible;
 
     }
@@ -567,16 +504,13 @@
     to {
 
         opacity: 0;
-
         visibility: hidden;
-
         pointer-events: none;
 
     }
 }
 
 </style>
-
 
 </head>
 
@@ -616,8 +550,10 @@
 
     position: relative;
 ">
+
+
 <!-- ================================================= -->
-<!-- PANTALLA DE ENTRADA RAVOX -->
+<!-- PANTALLA DE ENTRADA -->
 <!-- ================================================= -->
 
 <div id="pantalla-inicio">
@@ -638,6 +574,7 @@
 
 </div>
 
+
 <!-- ================================================= -->
 <!-- FONDO -->
 <!-- ================================================= -->
@@ -646,7 +583,7 @@
 
 
 <!-- ================================================= -->
-<!-- PARTÍCULAS FIJAS -->
+<!-- PARTÍCULAS -->
 <!-- ================================================= -->
 
 <div class="particula"
@@ -720,9 +657,8 @@ style="top:4040px;right:20%;width:3px;height:3px;"></div>
 
 
 <!-- ================================================= -->
-<!-- DESTELLOS FIJOS -->
+<!-- DESTELLOS -->
 <!-- ================================================= -->
-
 
 <div class="destello" style="top:12%; left:8%;">✦</div>
 <div class="destello" style="top:20%; left:28%;">✦</div>
@@ -737,9 +673,9 @@ style="top:4040px;right:20%;width:3px;height:3px;"></div>
 <div class="destello" style="top:78%; left:30%;">✦</div>
 <div class="destello" style="top:68%; left:60%;">✦</div>
 <div class="destello" style="top:82%; left:88%;">✦</div>
- 
-<!--
-================================================= -->
+
+
+<!-- ================================================= -->
 <!-- ENCABEZADO -->
 <!-- ================================================= -->
 
@@ -749,15 +685,12 @@ style="top:4040px;right:20%;width:3px;height:3px;"></div>
 ">
 
 
-<!-- RAVOX -->
-
 <div style="
     display:flex;
     align-items:center;
     justify-content:center;
     gap:20px;
 ">
-
 
 <div style="
     display:flex;
@@ -800,16 +733,9 @@ style="top:4040px;right:20%;width:3px;height:3px;"></div>
 
 <h1 style="
     color:#d6a3ff;
-
-    font-family:
-        'Times New Roman',
-        Times,
-        serif;
-
+    font-family:'Times New Roman',Times,serif;
     font-size:60px;
-
     margin:0;
-
     white-space:nowrap;
 ">
 
@@ -875,7 +801,6 @@ RAVOX
     background-color:#d6b3ff;
 "></div>
 
-
 <h2 style="
     color:#d6b3ff;
     font-size:32px;
@@ -886,7 +811,6 @@ RAVOX
 MOTO LIGHTING
 
 </h2>
-
 
 <div style="
     width:120px;
@@ -911,7 +835,6 @@ alt="Silueta"
 style="
     width:180px;
     height:auto;
-
     filter:
         drop-shadow(0 0 8px #c77dff)
         drop-shadow(0 0 18px #c77dff)
@@ -941,22 +864,16 @@ Bienvenido, aquí encuentras las mejores luces para tu vehículo
     margin:25px 0;
 ">
 
-
 <div style="
     flex:1;
     max-width:100px;
     height:2px;
-
     background:linear-gradient(
         to right,
         transparent,
         #8a2be2,
         #d6a3ff
     );
-
-    box-shadow:
-        0 0 6px #8a2be2,
-        0 0 12px #8a2be2;
 "></div>
 
 
@@ -966,7 +883,6 @@ Bienvenido, aquí encuentras las mejores luces para tu vehículo
     font-size:28px;
     text-align:center;
     white-space:nowrap;
-
     text-shadow:
         0 0 5px #c77dff,
         0 0 12px #a855f7,
@@ -982,17 +898,12 @@ NUESTROS PRODUCTOS
     flex:1;
     max-width:100px;
     height:2px;
-
     background:linear-gradient(
         to left,
         transparent,
         #8a2be2,
         #d6a3ff
     );
-
-    box-shadow:
-        0 0 6px #8a2be2,
-        0 0 12px #8a2be2;
 "></div>
 
 </div>
@@ -1022,7 +933,6 @@ src="Luces.jpg"
 alt="Luz auxiliar LED"
 >
 
-
 <button
 type="button"
 class="boton-carrusel boton-izquierda"
@@ -1031,7 +941,6 @@ onclick="imagenAnterior()">
 ‹
 
 </button>
-
 
 <button
 type="button"
@@ -1083,7 +992,9 @@ Comprar
 </a>
 
 </div>
+
 </div>
+
 
 <!-- ================================================= -->
 <!-- PRODUCTO 2 -->
@@ -1107,7 +1018,6 @@ src="Luces 4.png"
 alt="Luz con forma de búho"
 >
 
-
 <button
 type="button"
 class="boton-carrusel boton-izquierda"
@@ -1116,7 +1026,6 @@ onclick="imagenAnterior2()">
 ‹
 
 </button>
-
 
 <button
 type="button"
@@ -1194,7 +1103,6 @@ src="Luces 7.png"
 alt="Producto 3"
 >
 
-
 <button
 type="button"
 class="boton-carrusel boton-izquierda"
@@ -1203,7 +1111,6 @@ onclick="imagenAnterior3()">
 ‹
 
 </button>
-
 
 <button
 type="button"
@@ -1280,7 +1187,6 @@ src="Luces 10.png"
 alt="Producto 4"
 >
 
-
 <button
 type="button"
 class="boton-carrusel boton-izquierda"
@@ -1289,7 +1195,6 @@ onclick="imagenAnterior4()">
 ‹
 
 </button>
-
 
 <button
 type="button"
@@ -1368,7 +1273,6 @@ src="Luces 13.png"
 alt="Producto 5"
 >
 
-
 <button
 type="button"
 class="boton-carrusel boton-izquierda"
@@ -1377,7 +1281,6 @@ onclick="imagenAnterior5()">
 ‹
 
 </button>
-
 
 <button
 type="button"
@@ -1432,51 +1335,197 @@ Comprar
 
 
 <!-- ================================================= -->
-<!-- JAVASCRIPT -->
+<!-- PRODUCTO 6 -->
 <!-- ================================================= -->
+
+<div class="producto">
+
+<h3 class="titulo-producto">
+
+2 piezas de luz LED transparente de 3 lupas
+
+</h3>
+
+
+<div class="contenedor-carrusel">
+
+<img
+id="imagenCarrusel6"
+class="imagen-carrusel"
+src="Luces 16.png"
+alt="Luz LED transparente de 3 lupas"
+>
+
+<button
+type="button"
+class="boton-carrusel boton-izquierda"
+onclick="imagenAnterior6()">
+
+‹
+
+</button>
+
+<button
+type="button"
+class="boton-carrusel boton-derecha"
+onclick="imagenSiguiente6()">
+
+›
+
+</button>
+
+
+<div
+class="indicadores"
+id="indicadores6">
+
+<span class="punto activo"></span>
+<span class="punto"></span>
+<span class="punto"></span>
+
+</div>
+
+</div>
+
+
+<p class="modos">
+
+Modo 1: Blanco (6000K)<br>
+Modo 2: Amarillo (4500K)<br>
+Modo 3: Ámbar (5000K)<br>
+Modo 4: Estrobo (4200K)<br>
+Modo 5: Azul y Rojo (3500K)<br>
+Modo 6: Estrobo de Azul y Rojo (3500K)
+
+</p>
+
+
+<p class="precio">
+
+$250 MXN
+
+</p>
+
+
+<div style="text-align:center;">
+
+<a
+class="boton-comprar"
+href="https://mpago.la/2g7DUg4">
+
+Comprar
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SUPABASE + OPINIONES -->
+<!-- ================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 
-const URL_OPINIONES = "https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_W-OwlHLcmOQQZ4XwA9UBIiV9ghz5ezXqAZayv9o0R3u_Xvc7QG/exec";async function cargarOpiniones()  {
+const SUPABASE_URL =
+    "https://ycizrjkthlnsjocjgzcv.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_qNe_xeYW8q3mGew60RBcfg_bqSNVft7";
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+    );
+
+
+const URL_OPINIONES =
+"https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_W-OwlHLcmOQQZ4XwA9UBIiV9ghz5ezXqAZayv9o0R3u_Xvc7QG/exec";
+
+
+async function cargarOpiniones() {
 
     try {
 
-        const respuesta = await fetch(URL_OPINIONES);
+        const respuesta =
+            await fetch(URL_OPINIONES);
 
-        const opiniones = await respuesta.json();
+        const opiniones =
+            await respuesta.json();
 
         const contenedor =
-            document.getElementById("contenedorOpiniones");
+            document.getElementById(
+                "contenedorOpiniones"
+            );
 
         contenedor.innerHTML = "";
 
+
         opiniones.forEach(opinion => {
 
-            const tarjeta = document.createElement("div");
+            const tarjeta =
+                document.createElement("div");
+
 
             tarjeta.style.cssText = `
+
                 min-width:280px;
+
                 max-width:280px;
-                background:linear-gradient(145deg,#111111,#080808);
+
+                background:
+                    linear-gradient(
+                        145deg,
+                        #111111,
+                        #080808
+                    );
+
                 border:1px solid #7b2cff;
+
                 border-radius:15px;
+
                 padding:22px;
-                box-shadow:0 0 15px rgba(123,44,255,0.25);
+
+                box-shadow:
+                    0 0 15px
+                    rgba(
+                        123,
+                        44,
+                        255,
+                        0.25
+                    );
+
                 scroll-snap-align:center;
+
                 box-sizing:border-box;
+
             `;
-            
+
+
             const estrellas =
-    "★".repeat(Number(opinion.calificacion)                || 0);
-    
+                "⭐".repeat(
+                    Number(
+                        opinion.calificacion
+                    ) || 0
+                );
+
+
             tarjeta.innerHTML = `
+
                 <div style="
                     color:#ffd700;
                     font-size:20px;
                     margin-bottom:12px;
                 ">
+
                     ${estrellas}
+
                 </div>
+
 
                 <p style="
                     color:white;
@@ -1484,8 +1533,11 @@ const URL_OPINIONES = "https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_
                     line-height:1.5;
                     margin:0 0 15px;
                 ">
+
                     "${opinion.opinion || ""}"
+
                 </p>
+
 
                 <p style="
                     color:#9b5cff;
@@ -1493,13 +1545,19 @@ const URL_OPINIONES = "https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_
                     margin:0;
                     font-weight:bold;
                 ">
-                    — Cliente ${opinion.nombre || "Anónimo"}
+
+                    — Cliente
+                    ${opinion.nombre || "Anónimo"}
+
                 </p>
+
             `;
+
 
             contenedor.appendChild(tarjeta);
 
         });
+
 
     } catch (error) {
 
@@ -1509,17 +1567,26 @@ const URL_OPINIONES = "https://script.google.com/macros/s/AKfycbxzwpM_S6lBEDDeh_
         );
 
     }
+
 }
+
 
 cargarOpiniones();
 
-setInterval(cargarOpiniones, 30000); 
+
+setInterval(
+    cargarOpiniones,
+    30000
+);
+
 </script>
+
+
+<!-- ================================================= -->
+<!-- CARRUSELES -->
+<!-- ================================================= -->
+
 <script>
-/*
-================================================= */
-/* IMÁGENES */
-/* ================================================= */
 
 const imagenes1 = [
     "Luces.jpg",
@@ -1556,20 +1623,20 @@ const imagenes5 = [
 ];
 
 
-/* ================================================= */
-/* POSICIONES */
-/* ================================================= */
+const imagenes6 = [
+    "Luces 16.png",
+    "Luces 17.png",
+    "Luces 18.png"
+];
+
 
 let posicion1 = 0;
 let posicion2 = 0;
 let posicion3 = 0;
 let posicion4 = 0;
 let posicion5 = 0;
+let posicion6 = 0;
 
-
-/* ================================================= */
-/* FUNCIÓN GENERAL */
-/* ================================================= */
 
 function cambiarImagen(
     imagenId,
@@ -1578,8 +1645,9 @@ function cambiarImagen(
     posicion
 ) {
 
-    document.getElementById(imagenId).src =
-        imagenes[posicion];
+    document.getElementById(
+        imagenId
+    ).src = imagenes[posicion];
 
 
     const puntos =
@@ -1588,14 +1656,16 @@ function cambiarImagen(
         .querySelectorAll(".punto");
 
 
-    puntos.forEach(function(punto, indice) {
+    puntos.forEach(
+        function(punto, indice) {
 
-        punto.classList.toggle(
-            "activo",
-            indice === posicion
-        );
+            punto.classList.toggle(
+                "activo",
+                indice === posicion
+            );
 
-    });
+        }
+    );
 
 }
 
@@ -1608,7 +1678,10 @@ function imagenSiguiente() {
 
     posicion1++;
 
-    if (posicion1 >= imagenes1.length) {
+    if (
+        posicion1 >=
+        imagenes1.length
+    ) {
 
         posicion1 = 0;
 
@@ -1620,6 +1693,7 @@ function imagenSiguiente() {
         imagenes1,
         posicion1
     );
+
 }
 
 
@@ -1640,6 +1714,7 @@ function imagenAnterior() {
         imagenes1,
         posicion1
     );
+
 }
 
 
@@ -1651,7 +1726,10 @@ function imagenSiguiente2() {
 
     posicion2++;
 
-    if (posicion2 >= imagenes2.length) {
+    if (
+        posicion2 >=
+        imagenes2.length
+    ) {
 
         posicion2 = 0;
 
@@ -1663,6 +1741,7 @@ function imagenSiguiente2() {
         imagenes2,
         posicion2
     );
+
 }
 
 
@@ -1683,6 +1762,7 @@ function imagenAnterior2() {
         imagenes2,
         posicion2
     );
+
 }
 
 
@@ -1694,7 +1774,10 @@ function imagenSiguiente3() {
 
     posicion3++;
 
-    if (posicion3 >= imagenes3.length) {
+    if (
+        posicion3 >=
+        imagenes3.length
+    ) {
 
         posicion3 = 0;
 
@@ -1706,6 +1789,7 @@ function imagenSiguiente3() {
         imagenes3,
         posicion3
     );
+
 }
 
 
@@ -1726,6 +1810,7 @@ function imagenAnterior3() {
         imagenes3,
         posicion3
     );
+
 }
 
 
@@ -1737,7 +1822,10 @@ function imagenSiguiente4() {
 
     posicion4++;
 
-    if (posicion4 >= imagenes4.length) {
+    if (
+        posicion4 >=
+        imagenes4.length
+    ) {
 
         posicion4 = 0;
 
@@ -1749,6 +1837,7 @@ function imagenSiguiente4() {
         imagenes4,
         posicion4
     );
+
 }
 
 
@@ -1769,6 +1858,7 @@ function imagenAnterior4() {
         imagenes4,
         posicion4
     );
+
 }
 
 
@@ -1780,7 +1870,10 @@ function imagenSiguiente5() {
 
     posicion5++;
 
-    if (posicion5 >= imagenes5.length) {
+    if (
+        posicion5 >=
+        imagenes5.length
+    ) {
 
         posicion5 = 0;
 
@@ -1792,6 +1885,7 @@ function imagenSiguiente5() {
         imagenes5,
         posicion5
     );
+
 }
 
 
@@ -1812,11 +1906,63 @@ function imagenAnterior5() {
         imagenes5,
         posicion5
     );
+
+}
+
+
+/* ================================================= */
+/* PRODUCTO 6 */
+/* ================================================= */
+
+function imagenSiguiente6() {
+
+    posicion6++;
+
+    if (
+        posicion6 >=
+        imagenes6.length
+    ) {
+
+        posicion6 = 0;
+
+    }
+
+    cambiarImagen(
+        "imagenCarrusel6",
+        "indicadores6",
+        imagenes6,
+        posicion6
+    );
+
+}
+
+
+function imagenAnterior6() {
+
+    posicion6--;
+
+    if (posicion6 < 0) {
+
+        posicion6 =
+            imagenes6.length - 1;
+
+    }
+
+    cambiarImagen(
+        "imagenCarrusel6",
+        "indicadores6",
+        imagenes6,
+        posicion6
+    );
+
 }
 
 </script>
 
-<!-- OPINIONES DE CLIENTES -->
+
+<!-- ================================================= -->
+<!-- OPINIONES -->
+<!-- ================================================= -->
 
 <section style="
     background-color:#050505;
@@ -1827,48 +1973,60 @@ function imagenAnterior5() {
     overflow:hidden;
 ">
 
-    <h2 style="
-        color:white;
-        font-size:26px;
-        margin-bottom:8px;
-        letter-spacing:2px;
-    ">
-        ⭐ OPINIONES DE CLIENTES
-    </h2>
+<h2 style="
+    color:white;
+    font-size:26px;
+    margin-bottom:8px;
+    letter-spacing:2px;
+">
+
+⭐ OPINIONES DE CLIENTES
+
+</h2>
 
 
-    <p style="
-        color:#aaa;
-        font-size:14px;
-        margin-bottom:25px;
-    ">
-        Lo que dicen nuestros clientes
-    </p>
+<p style="
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:25px;
+">
+
+Lo que dicen nuestros clientes
+
+</p>
 
 
-    <div id="contenedorOpiniones" style="
-        display:flex;
-        gap:15px;
-        overflow-x:auto;
-        scroll-snap-type:x mandatory;
-        padding:5px 5px 15px;
-        scrollbar-width:none;
-    ">
+<div
+id="contenedorOpiniones"
+style="
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:5px 5px 15px;
+    scrollbar-width:none;
+">
 
-    </div>
+</div>
 
 
-    <p style="
-        color:#666;
-        font-size:12px;
-        margin-top:15px;
-    ">
-        Desliza para ver más opiniones →
-    </p>
+<p style="
+    color:#666;
+    font-size:12px;
+    margin-top:15px;
+">
+
+Desliza para ver más opiniones →
+
+</p>
 
 </section>
 
-<!-- DEJAR UNA OPINIÓN -->
+
+<!-- ================================================= -->
+<!-- DEJAR OPINIÓN -->
+<!-- ================================================= -->
+
 <section style="
     background:#050505;
     padding:30px 15px;
@@ -1877,271 +2035,322 @@ function imagenAnterior5() {
     font-family:Arial,sans-serif;
 ">
 
-    <h2 style="
-        font-size:24px;
-        letter-spacing:2px;
-        margin-bottom:8px;
-    ">
-         DEJA TU OPINIÓN
-    </h2>
+<h2 style="
+    font-size:24px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+">
 
-    <p style="
-        color:#aaa;
-        font-size:14px;
-        margin-bottom:25px;
-    ">
-        Cuéntanos qué te pareció tu producto RAVOX
-    </p>
+⭐ DEJA TU OPINIÓN
 
-    <form style="
-        max-width:450px;
-        margin:auto;
-        background:#0d0d0d;
-        border:1px solid #7b2cff;
-        border-radius:15px;
-        padding:20px;
-        box-shadow:0 0 18px rgba(123,44,255,0.25);
-        box-sizing:border-box;
- > 
+</h2>
 
-        <!-- OPINIÓN -->
-        <textarea
-            placeholder="Escribe tu opinión..."
-            required
-            rows="5"
-            style="
-                width:100%;
-                padding:13px;
-                margin-bottom:15px;
-                box-sizing:border-box;
-                background:#151515;
-                border:1px solid #333;
-                border-radius:8px;
-                color:white;
-                resize:none;
-                outline:none;
-            "
-        ></textarea>
 
-        <!-- BOTÓN DEJAR UNA OPINIÓN -->
+<p style="
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:25px;
+">
+
+Cuéntanos qué te pareció tu producto RAVOX
+
+</p>
+
+
+<form style="
+    max-width:450px;
+    margin:auto;
+    background:#0d0d0d;
+    border:1px solid #7b2cff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:
+        0 0 18px
+        rgba(123,44,255,0.25);
+    box-sizing:border-box;
+">
+
+
+<textarea
+placeholder="Escribe tu opinión..."
+required
+rows="5"
+style="
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+    background:#151515;
+    border:1px solid #333;
+    border-radius:8px;
+    color:white;
+    resize:none;
+    outline:none;
+"
+></textarea>
+
+
 <div style="
     text-align:center;
     padding:20px 15px 35px;
     background:#050505;
 ">
 
-    <a href="https://forms.gle/L7Zf56WYJbxbzhJE7"
-       target="_blank"
-       style="
-           display:inline-block;
-           padding:14px 28px;
-           background:#7b2cff;
-           color:white;
-           text-decoration:none;
-           font-family:Arial,sans-serif;
-           font-size:15px;
-           font-weight:bold;
-           letter-spacing:1px;
-           border-radius:8px;
-           box-shadow:0 0 15px rgba(123,44,255,0.45);
-           transition:0.3s;
-       "
-       onmouseover="this.style.boxShadow='0 0 25px rgba(123,44,255,0.9)'"
-       onmouseout="this.style.boxShadow='0 0 15px rgba(123,44,255,0.45)'">
+<a
+href="https://forms.gle/L7Zf56WYJbxbzhJE7"
+target="_blank"
+style="
+    display:inline-block;
+    padding:14px 28px;
+    background:#7b2cff;
+    color:white;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:1px;
+    border-radius:8px;
+    box-shadow:
+        0 0 15px
+        rgba(123,44,255,0.45);
+">
 
-         DEJAR UNA OPINIÓN
+⭐ DEJAR UNA OPINIÓN
 
-    </a>
+</a>
 
 </div>
 
-    </form>
+</form>
 
 </section>
 
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
 <footer style="
-    background: #050505;
-    color: white;
-    padding: 45px 25px 20px;
-    margin-top: 60px;
-    border-top: 1px solid #8a2be2;
-    font-family: Arial, sans-serif;
+    background:#050505;
+    color:white;
+    padding:45px 25px 20px;
+    margin-top:60px;
+    border-top:1px solid #8a2be2;
+    font-family:Arial,sans-serif;
 ">
 
-    <div style="
-        max-width: 1100px;
-        margin: auto;
-    ">
-
-        <!-- PARTE PRINCIPAL -->
-        <div style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 35px;
-        ">
-
-            <!-- MARCA -->
-            <div style="
-                flex: 1;
-                min-width: 230px;
-            ">
-
-                <div style="
-                    font-size: 30px;
-                    font-weight: bold;
-                    letter-spacing: 6px;
-                    text-shadow: 0 0 12px #8a2be2;
-                    margin-bottom: 8px;
-                ">
-                    RAVOX
-                </div>
-
-                <div style="
-                    color: #a855f7;
-                    font-size: 13px;
-                    letter-spacing: 4px;
-                    margin-bottom: 18px;
-                ">
-                    MOTO LIGHTING
-                </div>
-
-                <p style="
-                    color: #999;
-                    font-size: 14px;
-                    line-height: 1.7;
-                    max-width: 330px;
-                ">
-                    Iluminación para motocicletas diseñada para
-                    destacar tu estilo y mejorar tu experiencia
-                    en cada recorrido.
-                </p>
-
-            </div>
+<div style="
+    max-width:1100px;
+    margin:auto;
+">
 
 
-            <!-- ENLACES -->
-            <div style="
-                flex: 1;
-                min-width: 170px;
-            ">
-
-                <h3 style="
-                    font-size: 15px;
-                    letter-spacing: 2px;
-                    margin-bottom: 18px;
-                ">
-                    ENLACES
-                </h3>
-
-                <a href="#" style="
-                    display:block;
-                    color:#999;
-                    text-decoration:none;
-                    margin-bottom:10px;
-                    font-size:14px;
-                ">
-                    Inicio
-                </a>
-
-                <a href="#producto" style="
-                    display:block;
-                    color:#999;
-                    text-decoration:none;
-                    margin-bottom:10px;
-                    font-size:14px;
-                ">
-                     producto 
-                </a>
-
-                <a href="#contacto" style="
-                    display:block;
-                    color:#999;
-                    text-decoration:none;
-                    margin-bottom:10px;
-                    font-size:14px;
-                ">
-                    Contacto
-                </a>
-
-            </div>
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:35px;
+">
 
 
-            <!-- CONTACTO -->
-            <div style="
-                flex: 1;
-                min-width: 220px;
-            ">
+<!-- MARCA -->
 
-                <h3 style="
-                    font-size: 15px;
-                    letter-spacing: 2px;
-                    margin-bottom: 18px;
-                ">
-                    CONTACTO
-                </h3>
+<div style="
+    flex:1;
+    min-width:230px;
+">
 
-                <!-- WHATSAPP -->
-                <a href="https://wa.me/527791012153"
-                   target="_blank"
-                   style="
-                    color:#999;
-                    text-decoration:none;
-                    font-size:14px;
-                    display:block;
-                    margin-bottom:12px;
-                ">
-                    WhatsApp
-                </a>
+<div style="
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:6px;
+    text-shadow:0 0 12px #8a2be2;
+    margin-bottom:8px;
+">
 
-                <!-- FACEBOOK -->
-                <a href="https://www.facebook.com/share/1BWXeWSxwy/"
-                   target="_blank"
-                   style="
-                    color:#999;
-                    text-decoration:none;
-                    font-size:14px;
-                    display:block;
-                ">
-                    Facebook
-                </a>
+RAVOX
 
-            </div>
-
-        </div>
+</div>
 
 
-        <!-- SEPARADOR -->
-        <div style="
-            height:1px;
-            background:#222;
-            margin:35px 0 20px;
-        "></div>
+<div style="
+    color:#a855f7;
+    font-size:13px;
+    letter-spacing:4px;
+    margin-bottom:18px;
+">
+
+MOTO LIGHTING
+
+</div>
 
 
-        <!-- PARTE INFERIOR -->
-        <div style="
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:space-between;
-            gap:10px;
-            color:#666;
-            font-size:12px;
-        ">
+<p style="
+    color:#999;
+    font-size:14px;
+    line-height:1.7;
+    max-width:330px;
+">
 
-            <div>
-                © 2026 RAVOX Moto Lighting
-            </div>
+Iluminación para motocicletas diseñada para
+destacar tu estilo y mejorar tu experiencia
+en cada recorrido.
 
-            <div>
-                Todos los derechos reservados.
-            </div>
+</p>
 
-        </div>
+</div>
 
-    </div>
+
+<!-- ENLACES -->
+
+<div style="
+    flex:1;
+    min-width:170px;
+">
+
+<h3 style="
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:18px;
+">
+
+ENLACES
+
+</h3>
+
+
+<a
+href="#"
+style="
+    display:block;
+    color:#999;
+    text-decoration:none;
+    margin-bottom:10px;
+    font-size:14px;
+">
+
+Inicio
+
+</a>
+
+
+<a
+href="#"
+style="
+    display:block;
+    color:#999;
+    text-decoration:none;
+    margin-bottom:10px;
+    font-size:14px;
+">
+
+Productos
+
+</a>
+
+
+<a
+href="#"
+style="
+    display:block;
+    color:#999;
+    text-decoration:none;
+    margin-bottom:10px;
+    font-size:14px;
+">
+
+Contacto
+
+</a>
+
+</div>
+
+
+<!-- CONTACTO -->
+
+<div style="
+    flex:1;
+    min-width:220px;
+">
+
+<h3 style="
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:18px;
+">
+
+CONTACTO
+
+</h3>
+
+
+<a
+href="https://wa.me/527791012153"
+target="_blank"
+style="
+    color:#999;
+    text-decoration:none;
+    font-size:14px;
+    display:block;
+    margin-bottom:12px;
+">
+
+WhatsApp
+
+</a>
+
+
+<a
+href="https://www.facebook.com/share/1BWXeWSxwy/"
+target="_blank"
+style="
+    color:#999;
+    text-decoration:none;
+    font-size:14px;
+    display:block;
+">
+
+Facebook
+
+</a>
+
+</div>
+
+</div>
+
+
+<div style="
+    height:1px;
+    background:#222;
+    margin:35px 0 20px;
+"></div>
+
+
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:10px;
+    color:#666;
+    font-size:12px;
+">
+
+<div>
+© 2026 RAVOX Moto Lighting
+</div>
+
+
+<div>
+Todos los derechos reservados.
+</div>
+
+</div>
+
+</div>
 
 </footer>
 
+
 </body>
+
 </html>
